@@ -51,7 +51,8 @@ const a = {
     "email": "j.dink@erw.com",
 }
 
-const b = lodash.pick(a, ['name', 'email']); 
+const b = lodash.omit(a,'age'); 
+
 
 //task 4
 const a = {
@@ -60,6 +61,6 @@ const a = {
     "email": "j.dink@erw.com",
 }
 
-a.age = undefined;
+const {age, ...b} = a
 
-b = JSON.parse(JSON.stringify(a))
+console.log(b)
